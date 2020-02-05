@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1017CB423EAF9D8002ADC50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CB323EAF9D8002ADC50 /* AppDelegate.m */; };
+		A1017CB723EAF9D8002ADC50 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CB623EAF9D8002ADC50 /* SceneDelegate.m */; };
+		A1017CBA23EAF9D8002ADC50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CB923EAF9D8002ADC50 /* ViewController.m */; };
+		A1017CBD23EAF9D8002ADC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1017CBB23EAF9D8002ADC50 /* Main.storyboard */; };
+		A1017CBF23EAF9DA002ADC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1017CBE23EAF9DA002ADC50 /* Assets.xcassets */; };
+		A1017CC223EAF9DA002ADC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1017CC023EAF9DA002ADC50 /* LaunchScreen.storyboard */; };
+		A1017CC523EAF9DA002ADC50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CC423EAF9DA002ADC50 /* main.m */; };
+		A1017D0123EAFA34002ADC50 /* aviators in Resources */ = {isa = PBXBuildFile; fileRef = A1017CE223EAFA34002ADC50 /* aviators */; };
+		A1017D0C23EAFC48002ADC50 /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1017CE923EAFA34002ADC50 /* DeepAR.framework */; };
+		A1017D0D23EAFC48002ADC50 /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1017CE923EAFA34002ADC50 /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1017D0E23EAFC48002ADC50 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1017D0D23EAFC48002ADC50 /* DeepAR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A1017CAF23EAF9D8002ADC50 /* photoedit-ios-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photoedit-ios-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1017CB223EAF9D8002ADC50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1017CB323EAF9D8002ADC50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1017CB523EAF9D8002ADC50 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		A1017CB623EAF9D8002ADC50 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		A1017CB823EAF9D8002ADC50 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A1017CB923EAF9D8002ADC50 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A1017CBC23EAF9D8002ADC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1017CBE23EAF9DA002ADC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1017CC123EAF9DA002ADC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1017CC323EAF9DA002ADC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1017CC423EAF9DA002ADC50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1017CE223EAFA34002ADC50 /* aviators */ = {isa = PBXFileReference; lastKnownFileType = file; path = aviators; sourceTree = "<group>"; };
+		A1017CE923EAFA34002ADC50 /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DeepAR.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1017CAC23EAF9D8002ADC50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1017D0C23EAFC48002ADC50 /* DeepAR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1017CA623EAF9D8002ADC50 = {
+			isa = PBXGroup;
+			children = (
+				A1017CB123EAF9D8002ADC50 /* photoedit-ios-objc */,
+				A1017CB023EAF9D8002ADC50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1017CB023EAF9D8002ADC50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1017CAF23EAF9D8002ADC50 /* photoedit-ios-objc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1017CB123EAF9D8002ADC50 /* photoedit-ios-objc */ = {
+			isa = PBXGroup;
+			children = (
+				A1017CCB23EAFA34002ADC50 /* Effects */,
+				A1017CE823EAFA34002ADC50 /* Frameworks */,
+				A1017CB223EAF9D8002ADC50 /* AppDelegate.h */,
+				A1017CB323EAF9D8002ADC50 /* AppDelegate.m */,
+				A1017CB523EAF9D8002ADC50 /* SceneDelegate.h */,
+				A1017CB623EAF9D8002ADC50 /* SceneDelegate.m */,
+				A1017CB823EAF9D8002ADC50 /* ViewController.h */,
+				A1017CB923EAF9D8002ADC50 /* ViewController.m */,
+				A1017CBB23EAF9D8002ADC50 /* Main.storyboard */,
+				A1017CBE23EAF9DA002ADC50 /* Assets.xcassets */,
+				A1017CC023EAF9DA002ADC50 /* LaunchScreen.storyboard */,
+				A1017CC323EAF9DA002ADC50 /* Info.plist */,
+				A1017CC423EAF9DA002ADC50 /* main.m */,
+			);
+			path = "photoedit-ios-objc";
+			sourceTree = "<group>";
+		};
+		A1017CCB23EAFA34002ADC50 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				A1017CE223EAFA34002ADC50 /* aviators */,
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
+		A1017CE823EAFA34002ADC50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1017CE923EAFA34002ADC50 /* DeepAR.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1017CAE23EAF9D8002ADC50 /* photoedit-ios-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1017CC823EAF9DA002ADC50 /* Build configuration list for PBXNativeTarget "photoedit-ios-objc" */;
+			buildPhases = (
+				A1017CAB23EAF9D8002ADC50 /* Sources */,
+				A1017CAC23EAF9D8002ADC50 /* Frameworks */,
+				A1017CAD23EAF9D8002ADC50 /* Resources */,
+				A1017D0E23EAFC48002ADC50 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "photoedit-ios-objc";
+			productName = "photoedit-ios-objc";
+			productReference = A1017CAF23EAF9D8002ADC50 /* photoedit-ios-objc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1017CA723EAF9D8002ADC50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = DeepAR;
+				TargetAttributes = {
+					A1017CAE23EAF9D8002ADC50 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = A1017CAA23EAF9D8002ADC50 /* Build configuration list for PBXProject "photoedit-ios-objc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1017CA623EAF9D8002ADC50;
+			productRefGroup = A1017CB023EAF9D8002ADC50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1017CAE23EAF9D8002ADC50 /* photoedit-ios-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1017CAD23EAF9D8002ADC50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1017CC223EAF9DA002ADC50 /* LaunchScreen.storyboard in Resources */,
+				A1017D0123EAFA34002ADC50 /* aviators in Resources */,
+				A1017CBF23EAF9DA002ADC50 /* Assets.xcassets in Resources */,
+				A1017CBD23EAF9D8002ADC50 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1017CAB23EAF9D8002ADC50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1017CBA23EAF9D8002ADC50 /* ViewController.m in Sources */,
+				A1017CB423EAF9D8002ADC50 /* AppDelegate.m in Sources */,
+				A1017CC523EAF9DA002ADC50 /* main.m in Sources */,
+				A1017CB723EAF9D8002ADC50 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1017CBB23EAF9D8002ADC50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1017CBC23EAF9D8002ADC50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1017CC023EAF9DA002ADC50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1017CC123EAF9DA002ADC50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1017CC623EAF9DA002ADC50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1017CC723EAF9DA002ADC50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1017CC923EAF9DA002ADC50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 339454YJJ4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/photoedit-ios-objc/Frameworks",
+				);
+				INFOPLIST_FILE = "photoedit-ios-objc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.deepar.photoedit-ios-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1017CCA23EAF9DA002ADC50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 339454YJJ4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/photoedit-ios-objc/Frameworks",
+				);
+				INFOPLIST_FILE = "photoedit-ios-objc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ai.deepar.photoedit-ios-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1017CAA23EAF9D8002ADC50 /* Build configuration list for PBXProject "photoedit-ios-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1017CC623EAF9DA002ADC50 /* Debug */,
+				A1017CC723EAF9DA002ADC50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1017CC823EAF9DA002ADC50 /* Build configuration list for PBXNativeTarget "photoedit-ios-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1017CC923EAF9DA002ADC50 /* Debug */,
+				A1017CCA23EAF9DA002ADC50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1017CA723EAF9D8002ADC50 /* Project object */;
+}
