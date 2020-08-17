@@ -13,16 +13,24 @@
 
 @property (nonatomic, strong) ARView* arview;
 @property (nonatomic, strong) UIImage* photo;
-
+@property (nonatomic, assign) BOOL searchingForFace;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.searchingForFace = NO;
 }
 
 - (IBAction)loadPhotoTapped:(id)sender {
+    self.searchingForFace = NO;
+    if(self.arview){
+        [self.arview removeFromSuperview];
+        [self.arview shutdown];
+        self.arview = nil;
+        self.photo = nil;
+    }
     UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
     imagePicker.allowsEditing = NO;
@@ -62,7 +70,7 @@
     [self.arview setLicenseKey:@"your_license_key_goes_here"];
     self.arview.delegate = self;
     [self.view insertSubview:self.arview atIndex:0];
-    [self.arview initializeWithCustomCameraUsingPreset:AVCaptureSessionPreset1280x720];
+    [self.arview initialize];
 }
 
 - (CVPixelBufferRef)pixelBufferFromCGImage:(CGImageRef)image {
@@ -138,20 +146,30 @@
 
         CMSampleBufferRef sampleBuffer = NULL;
         CMSampleBufferCreateForImageBuffer( kCFAllocatorDefault, pixelBuffer, true, NULL, NULL, videoInfo, &timingInfo, &sampleBuffer );
-        
-        [self.arview enqueueCameraFrame:sampleBuffer mirror:NO];
+        self.searchingForFace = YES;
+        [self enqueueFrame:sampleBuffer];
         [self.arview switchEffectWithSlot:@"mask" path:[[NSBundle mainBundle] pathForResource:@"aviators" ofType:@""]];
+
     }
+}
+
+- (void)enqueueFrame:(CMSampleBufferRef) sampleBuffer{
+    if (!self.searchingForFace){
+        return;
+    }
+    [self.arview enqueueCameraFrame:sampleBuffer mirror:NO];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self enqueueFrame:sampleBuffer];
+    });
 }
 
 - (void)faceVisiblityDidChange:(BOOL)faceVisible {
-    
+    [self.arview takeScreenshot];
+    self.searchingForFace = NO;
 }
 
 - (void)didSwitchEffect:(NSString *)slot {
-    if ([slot isEqualToString:@"slot:mask"]) {
-        [self.arview takeScreenshot];
-    }
+    
 }
 
 @end
