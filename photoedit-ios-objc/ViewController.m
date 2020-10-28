@@ -9,9 +9,12 @@
 #import "ViewController.h"
 #import <DeepAR/ARView.h>
 
-@interface ViewController () <ARViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ViewController () <ARViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    CMSampleBufferRef _sampleBuffer;
+}
 
 @property (nonatomic, strong) ARView* arview;
+@property (nonatomic, strong) DeepAR* deepAR;
 @property (nonatomic, strong) UIImage* photo;
 @property (nonatomic, assign) BOOL searchingForFace;
 @end
@@ -67,7 +70,7 @@
 
 - (void)processPhoto {
     self.arview = [[ARView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [self.arview setLicenseKey:@"your_license_key_goes_here"];
+    [self.arview setLicenseKey:@"04363a986dfffbeb1938fdcb3e8ae4566bd6f7e5bcf3c5abb79a0006fec67e7b137c86221c1a9f61"];
     self.arview.delegate = self;
     [self.view insertSubview:self.arview atIndex:0];
     [self.arview initialize];
@@ -125,11 +128,11 @@
 }
 
 - (void)didTakeScreenshot:(UIImage*)screenshot {
-    UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil);
-    [self.arview removeFromSuperview];
-    [self.arview shutdown];
-    self.arview = nil;
-    self.photo = nil;
+//    UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil);
+//    [self.arview removeFromSuperview];
+//    [self.arview shutdown];
+//    self.arview = nil;
+//    self.photo = nil;
 }
 
 - (void)didInitialize {
@@ -144,13 +147,25 @@
         CMVideoFormatDescriptionRef videoInfo = NULL;
         CMVideoFormatDescriptionCreateForImageBuffer(NULL, pixelBuffer, &videoInfo);
 
-        CMSampleBufferRef sampleBuffer = NULL;
-        CMSampleBufferCreateForImageBuffer( kCFAllocatorDefault, pixelBuffer, true, NULL, NULL, videoInfo, &timingInfo, &sampleBuffer );
+        _sampleBuffer = NULL;
+        CMSampleBufferCreateForImageBuffer( kCFAllocatorDefault, pixelBuffer, true, NULL, NULL, videoInfo, &timingInfo, &_sampleBuffer);
         self.searchingForFace = YES;
-        [self enqueueFrame:sampleBuffer];
+        
         [self.arview switchEffectWithSlot:@"mask" path:[[NSBundle mainBundle] pathForResource:@"aviators" ofType:@""]];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [NSTimer scheduledTimerWithTimeInterval:0.5
+                    target:self
+                    selector:@selector(targetMethod)
+                    userInfo:nil
+                    repeats:YES];
+        });
 
     }
+}
+
+-(void) targetMethod  {
+    NSLog(@"Calling enqueue frame");
+    [self enqueueFrame:_sampleBuffer];
 }
 
 - (void)enqueueFrame:(CMSampleBufferRef) sampleBuffer{
@@ -164,7 +179,7 @@
 }
 
 - (void)faceVisiblityDidChange:(BOOL)faceVisible {
-    [self.arview takeScreenshot];
+    //[self.arview takeScreenshot];
     self.searchingForFace = NO;
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A49712124FEF1E800DD9C86 /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A49711F24FEF1E000DD9C86 /* DeepAR.framework */; };
+		9A49712224FEF1E800DD9C86 /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A49711F24FEF1E000DD9C86 /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1017CB423EAF9D8002ADC50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CB323EAF9D8002ADC50 /* AppDelegate.m */; };
 		A1017CB723EAF9D8002ADC50 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CB623EAF9D8002ADC50 /* SceneDelegate.m */; };
 		A1017CBA23EAF9D8002ADC50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CB923EAF9D8002ADC50 /* ViewController.m */; };
@@ -15,8 +17,6 @@
 		A1017CC223EAF9DA002ADC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1017CC023EAF9DA002ADC50 /* LaunchScreen.storyboard */; };
 		A1017CC523EAF9DA002ADC50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1017CC423EAF9DA002ADC50 /* main.m */; };
 		A1017D0123EAFA34002ADC50 /* aviators in Resources */ = {isa = PBXBuildFile; fileRef = A1017CE223EAFA34002ADC50 /* aviators */; };
-		A1017D0C23EAFC48002ADC50 /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1017CE923EAFA34002ADC50 /* DeepAR.framework */; };
-		A1017D0D23EAFC48002ADC50 /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A1017CE923EAFA34002ADC50 /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A1017D0D23EAFC48002ADC50 /* DeepAR.framework in Embed Frameworks */,
+				9A49712224FEF1E800DD9C86 /* DeepAR.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A49711F24FEF1E000DD9C86 /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DeepAR.framework; sourceTree = "<group>"; };
 		A1017CAF23EAF9D8002ADC50 /* photoedit-ios-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "photoedit-ios-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1017CB223EAF9D8002ADC50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1017CB323EAF9D8002ADC50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		A1017CC323EAF9DA002ADC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1017CC423EAF9DA002ADC50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1017CE223EAFA34002ADC50 /* aviators */ = {isa = PBXFileReference; lastKnownFileType = file; path = aviators; sourceTree = "<group>"; };
-		A1017CE923EAFA34002ADC50 /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DeepAR.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1017D0C23EAFC48002ADC50 /* DeepAR.framework in Frameworks */,
+				9A49712124FEF1E800DD9C86 /* DeepAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		A1017CE823EAFA34002ADC50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1017CE923EAFA34002ADC50 /* DeepAR.framework */,
+				9A49711F24FEF1E000DD9C86 /* DeepAR.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
